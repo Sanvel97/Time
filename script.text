@@ -1,0 +1,70 @@
+'use strict'
+
+
+// console.log(9)
+
+
+let cts = document.querySelector('.citys');
+let gadgetner = document.querySelector('.gadgetner');
+cts.onclick = function func(){
+		gadgetner.classList.add('added')
+		cts.style.opacity = 0;
+	}
+
+
+
+
+let a = new Date(),
+s = a.getSeconds(),
+m = a.getMinutes(),
+h = a.getHours();
+
+
+function func2(){  
+	h1.style.display = 'none';
+	spn1.innerHTML = 'YVN' + h + ':';
+	spn2.innerHTML = m + ':';
+	spn3.innerHTML = s;
+	let b = setInterval(func3, 1000)
+	function func3(){
+		s++;
+	spn3.innerHTML = s ;
+	if(s == 60){
+		s = 0;
+		m++;
+	spn2.innerHTML = m + ':';
+	}
+	if(m == 60){
+		m = 0;
+		h++;
+		spn1.innerHTML = 'YVN' + h + ':';
+	}
+	if(h == 24){
+		h = 0;
+	}
+}
+}
+
+
+
+
+
+let gadget = document.querySelector('.gadget');
+gadget.addEventListener('click', func2)
+let h1 = document.querySelector('.paragrap'),
+spn1 = document.querySelector('.spn1'),
+spn2 = document.querySelector('.spn2'),
+spn3 = document.querySelector('.spn3');
+
+
+// let gadget2 = document.querySelector('.gadget2');
+// gadget2.addEventListener('click', func2)
+// let h2 = document.querySelector('.paragrap1'),
+// spn4 = document.querySelector('.spn4'),
+// spn5 = document.querySelector('.spn5'),
+// spn6 = document.querySelector('.spn6'),
+
+
+
+
+
